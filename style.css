@@ -1,0 +1,730 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght?300;400;');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+.container .head {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 50px;
+    z-index: 1000000;
+}
+
+.container .head img {
+    width: 10%;
+}
+
+.container .head a {
+    color: white;
+    text-decoration: none;
+    background-color: #e50914;
+    padding: 8px 18px;
+    border-radius: 5px;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(to bottom, #000, transparent);
+}
+
+.banner:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(to top, #000, transparent);
+}
+
+.banner .fit{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.banner .box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.banner .box .heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.banner .box .heading h2{
+    font-size: 3.125rem;
+    color: white;
+    /* letter-spacing: 2px; */
+    width: 80%;
+}
+
+.banner .box .heading h5{
+    font-size: 1.625rem;
+    color: white;
+    font-weight: 400;
+    padding: 1rem 0;
+}
+
+.banner .box .heading p{
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 500;
+    padding: 15px 0;
+    padding-bottom: 20px;
+}
+
+.banner .box .search {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .box .search input {
+    font-size: 16px;
+    border: 1px solid #8c8c8c;
+    outline: none;
+    color: black;
+    border-radius: 2px;
+    padding: 10px 10px 10px 10px;
+    min-width: 400px;
+    height: 60px;
+    align-items: center;
+}
+
+.banner .box .search a{
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 0.1px;
+    border-radius: 2px;
+    background-color: #e50914;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+    font-size: 1.625rem;
+    line-height: 60px;
+    min-width: 200px;
+    padding: 0 30px;
+}
+
+.enjoy-on-tv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 4rem;
+    border-bottom: 0.6rem solid #111;
+}
+
+.enjoy-on-tv .text {
+    position: relative;
+    /* left: 10%; */
+    width: 40%;
+    /* color: white;
+    z-index: 1000; */
+}
+
+.enjoy-on-tv .text h1{
+    font-size: 3.3rem;
+    /* letter-spacing: 2px; */
+    padding-bottom: 10px;
+    color: white;
+}
+
+.enjoy-on-tv .text p{
+    font-size: 1.6rem;
+    color: white;
+}
+
+.enjoy-on-tv .img{
+    width: 45%;
+}
+
+.enjoy-on-tv .img img{
+    width: 100%;
+}
+
+.download-shows {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 4rem;
+    border-bottom: 0.6rem solid #111;
+}
+
+.download-shows .text {
+    position: relative;
+    /* left: 10%; */
+    width: 40%;
+}
+
+.download-shows .text h1{
+    font-size: 3.3rem;
+    /* letter-spacing: 2px; */
+    padding-bottom: 10px;
+    color: white;
+}
+
+.download-shows .text p{
+    font-size: 1.6rem;
+    color: white;
+}
+
+.download-shows .img{
+    width: 45%;
+}
+
+.download-shows .img img{
+    width: 100%;
+}
+
+.watch-everywhere {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 4rem;
+    border-bottom: 0.6rem solid #111;
+}
+
+.watch-everywhere .text {
+    position: relative;
+    /* left: 10%; */
+    width: 40%;
+}
+
+.watch-everywhere .text h1{
+    font-size: 3.3rem;
+    /* letter-spacing: 2px; */
+    padding-bottom: 10px;
+    color: white;
+}
+
+.watch-everywhere .text p{
+    font-size: 1.6rem;
+    color: white;
+}
+
+.watch-everywhere .img{
+    width: 45%;
+}
+
+.watch-everywhere .img img{
+    width: 100%;
+}
+
+.children-profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 4rem;
+    border-bottom: 0.6rem solid #111;
+}
+
+.children-profile .text {
+    position: relative;
+    /* left: 10%; */
+    width: 40%;
+}
+
+.children-profile .text h1{
+    font-size: 3.3rem;
+    /* letter-spacing: 2px; */
+    padding-bottom: 10px;
+    color: white;
+}
+
+.children-profile .text p{
+    font-size: 1.6rem;
+    color: white;
+}
+
+.children-profile .img{
+    width: 45%;
+}
+
+.children-profile .img img{
+    width: 100%;
+}
+
+.faq {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.faq h1{
+    color: white;
+    font-size: 3rem;
+    padding: 3rem 0 4rem 0
+}
+
+.title{
+    background-color: #303030;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.icon {
+    width: 20px;
+    position: relative;
+    color: white;
+}
+
+.icon:before, .icon:after{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    background-color: white;
+    top: -1.5px;
+}
+
+.icon:after {
+    transform: rotate(90deg);
+    transition: 0.5s linear;
+}
+
+.text {
+    background-color: #303030;
+    line-height: 35px;
+    margin: 3px 0;
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 400;
+    height: 0;
+    opacity: 0;
+}
+
+.item:target .text{
+    opacity: 1;
+    height: auto;
+    padding: 20px 30px;
+    margin: 0;
+    border-top: 2px solid #000;
+    margin-bottom: 6px;
+}
+
+.item:target .icon:after{
+    transform: rotateY(90deg);
+}
+
+.get-started {
+    border-bottom: 0.6rem solid #111;
+}
+
+.get-started .box {
+    margin: 4rem 0;
+}
+
+.get-started .box .heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.get-started .box .heading h2 { 
+    font-size: 3.125rem;
+    color: white;
+    /* letter-spacing: 2px; */
+    width: 80%;
+}
+
+.get-started .box .heading h5 {
+    font-size: 1.625rem;
+    color: white;
+    font-weight: 400;
+    padding: 1rem 0;
+}
+
+.get-started .box .heading p {
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 500;
+    padding: 15px 0;
+    padding-bottom: 20px;
+}
+
+.get-started .box .search {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.get-started .box .search input {
+    font-size: 16px;
+    border: 1px solid #8c8c8c;
+    outline: none;
+    color: black;
+    border-radius: 2px;
+    padding: 10px 10px 10px 10px;
+    min-width: 400px;
+    height: 60px;
+    align-items: center;
+}
+
+.get-started .box .search a {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 0.1px;
+    border-radius: 2px;
+    background-color: #e50914;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+    font-size: 1.625rem;
+    line-height: 60px;
+    min-width: 200px;
+    padding: 0 30px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    padding: 4rem 0;
+}
+
+.footer .one {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    width: 30%;
+}
+
+.footer .one li {
+    padding: 7px 0;
+}
+
+.footer .one li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer .one li a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 787px) {
+    .container .head {
+        padding: 20px 50px;
+    }
+
+    .container .head img {
+        width: 20%;
+    }
+
+    .banner .box .heading h2 {
+        font-size: 3.1rem;
+        letter-spacing: 1.5px;
+        width: 100%;
+    }
+
+    .banner .box .heading h5 {
+        font-size: 1.4rem;
+        padding: 0.8rem 0;
+    }
+
+    .banner .box .heading p {
+        font-size: 1.1rem;
+        padding: 13px 0;
+        padding-bottom: 17px;
+    }
+
+    .banner .box .search {
+        flex-direction: column;
+    }
+
+    .banner .box .search input {
+        min-width: 310px;
+        margin-bottom: 20px;
+    }
+
+    .enjoy-on-tv {
+        flex-direction: column-reverse;
+        justify-content: center;
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+
+    .enjoy-on-tv .text {
+        width: 80%;
+        margin: 20px 0 30px 0;
+    }
+
+    .enjoy-on-tv .text h1 {
+        font-size: 3.2rem;
+        letter-spacing: 1.5px;
+        padding-bottom: 5px;
+    }
+
+    .enjoy-on-tv .text p {
+        font-size: 1.5rem;
+    }
+
+    .enjoy-on-tv .img {
+        width: 80%;
+    }
+
+    .download-shows {
+        flex-direction: column;
+        justify-content: center;
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+
+    .download-shows .text {
+        width: 80%;
+        margin: 20px 0 30px 0;
+    }
+
+    .download-shows .text h1 {
+        font-size: 3.2rem;
+        letter-spacing: 1.5px;
+        padding-bottom: 5px;
+    }
+
+    .download-shows .text p {
+        font-size: 1.5rem;
+    }
+
+    .download-shows .img {
+        width: 80%;
+    }
+
+    .watch-everywhere {
+        flex-direction: column-reverse;
+        justify-content: center;
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+
+    .watch-everywhere .text {
+        width: 80%;
+        margin: 20px 0 30px 0;
+    }
+
+    .watch-everywhere .text h1 {
+        font-size: 3.2rem;
+        letter-spacing: 1.5px;
+        padding-bottom: 5px;
+    }
+
+    .watch-everywhere .text p {
+        font-size: 1.5rem;
+    }
+
+    .watch-everywhere .img {
+        width: 80%;
+    }
+
+    .children-profile {
+        flex-direction: column;
+        justify-content: center;
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+
+    .children-profile .text {
+        width: 80%;
+        margin: 20px 0 30px 0;
+    }
+
+    .children-profile .text h1 {
+        font-size: 3.2rem;
+        letter-spacing: 1.5px;
+        padding-bottom: 5px;
+    }
+
+    .children-profile .text p {
+        font-size: 1.5rem;
+    }
+
+    .children-profile .img {
+        width: 80%;
+    }
+
+    .faq {
+        width: 80%;
+    }
+    
+    .faq h1{
+        width: 100%;
+        font-size: 2.6rem;
+        text-align: center;
+    }
+    
+    .title{
+        font-size: 1.6rem;
+    }
+    
+    .get-started .box {
+        margin: 4rem 0;
+    }
+    
+    .get-started .box .heading p {
+        font-size: 1.1rem;
+        padding: 13px 0;
+        padding-bottom: 17px;
+    }
+    
+    .get-started .box .search {
+        flex-direction: column;
+    }
+    
+    .get-started .box .search input {
+        min-width: 310px;
+        margin-bottom: 20px;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+    
+    .footer .one {
+        width: 50%;
+    }
+    
+}
+
+@media screen and (max-width: 496px) {
+    .container .head img {
+        width: 23%;
+    }
+
+    .banner .box .heading h2 {
+        font-size: 2.8rem;
+        letter-spacing: 1.3px;
+    }
+
+    .banner .box .heading h5 {
+        font-size: 1.2rem;
+    }
+
+    .banner .box .heading p {
+        font-size: 1rem;
+        padding: 12px 0;
+        padding-bottom: 15px;
+    }
+
+    .banner .box .search input {
+        margin-bottom: 10px;
+    }
+
+    .enjoy-on-tv .text h1 {
+        font-size: 3rem;
+        letter-spacing: 1.2px;
+    }
+
+    .enjoy-on-tv .text p {
+        font-size: 1.2rem;
+    }
+
+    .download-shows .text h1 {
+        font-size: 3rem;
+        letter-spacing: 1.2px;
+    }
+
+    .download-shows .text p {
+        font-size: 1.2rem;
+    }
+
+    .watch-everywhere .text h1 {
+        font-size: 3rem;
+        letter-spacing: 1.2px;
+    }
+
+    .watch-everywhere .text p {
+        font-size: 1.2rem;
+    }
+
+    .children-profile .text h1 {
+        font-size: 3rem;
+        letter-spacing: 1.2px;
+    }
+
+    .children-profile .text p {
+        font-size: 1.5rem;
+    }
+
+    .faq {
+        width: 90%;
+    }
+    
+    .faq h1 {
+        width: 100%;
+        font-size: 2.1rem;
+    }
+
+    .text {
+        font-size: 1.2rem;
+    }
+    
+    .title {
+        font-size: 1.2rem;
+    }
+    
+    .get-started .box .heading p {
+        font-size: 1rem;
+        padding: 13px 0;
+    }
+
+    .get-started .box .search input {
+        margin-bottom: 10px;
+    }
+
+}
+
